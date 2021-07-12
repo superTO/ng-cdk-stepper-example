@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CdkStepper } from '@angular/cdk/stepper';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-my-stepper',

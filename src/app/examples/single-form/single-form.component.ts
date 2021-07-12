@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import {
   FormBuilder,
   Validators,
@@ -21,6 +21,8 @@ import {
   styleUrls: ['./single-form.component.scss'],
 })
 export class SingleFormComponent implements OnInit {
+  @ViewChild ('cdkStepper') cdkStepper: any;
+
   @Input()
   isLinear = true;
 
@@ -75,6 +77,10 @@ export class SingleFormComponent implements OnInit {
         }),
       ]),
     });
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.cdkStepper);
   }
 
   submit(): void {

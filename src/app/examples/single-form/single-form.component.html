@@ -1,4 +1,5 @@
 <form [formGroup]="frmStepper" (submit)="submit()">
+  <!-- app-my-stepper extends CdkStepper -->
   <app-my-stepper #cdkStepper formArrayName="steps" [linear]="isLinear">
     <cdk-step [editable]="isEditable" formGroupName="0" [stepControl]="formArray.get([0])">
       <ng-template cdkStepLabel>
